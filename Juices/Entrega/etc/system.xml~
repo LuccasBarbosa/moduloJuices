@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <juices_entrega translate="label" module="entrega">
+            <label>Data da Entrega</label>
+            <sort_order>110</sort_order>
+        </juices_entrega>
+    </tabs>
+
+</config>

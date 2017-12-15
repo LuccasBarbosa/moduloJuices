@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+
+    <modules>
+        <entrega>
+		<version>1.0</version>
+	</entrega>
+    </modules>
+
+    <global>
+	<fieldsets>
+		<sales_convert_quote_item>
+			<data_entrega>
+			    <to_order_item>*</to_order_item>
+			</data_entrega>
+		</sales_convert_quote_item> 
+	    </fieldsets> 
+
+	<models>
+	    <entrega>
+	        <class>Juices_Entrega_Model</class>
+	    </entrega>
+	</models>
+
+	<events>
+	    <controller_action_predispatch_checkout_cart_add>
+	        <observers>
+	            <entrega>
+			<type>singleton</type>
+			<class>entrega/observer</class>
+			<method>customerCheckoutAdd</method>	
+	            </entrega>
+	        </observers>
+	    </controller_action_predispatch_checkout_cart_add>
+	</events>
+    </global> 
+
+				
+</config>
